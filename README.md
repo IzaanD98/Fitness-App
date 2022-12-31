@@ -5,4 +5,10 @@ The purpose of the web application is to give users the ability to create an acc
 
 The template folder contains several HTML files, including pages for login, registration, records, push, pull, and legs. These files use both Jinja and HTML code. The layout page includes the main HTML code, including the navbar which will be displayed on all pages using Jinja. The records HTML file uses a Jinja for loop to display the data from the "records" table, allowing users to view the information they have entered into the web application.
 
-If a user makes a mistake or does not provide a password or username, the apology function will redirect the user to a custom meme with the HTML error code and what went wrong. The majority of the styling for the application has been implemented using the Bootstrap framework.
+In the app.py file, it is written in Python and is using the Flask web framework to build a web application. The code configures the application and sets up routes, which are URLs that the application can handle, and functions to execute when those routes are accessed.The @app.route decorators above the functions specify the URL that the function should be associated with. For example, the index function will execute when the user accesses the root URL of the application (/).The login and logout functions handle the user login and logout process, respectively. The push, pull, and legs functions allow users to enter exercise information and record it in the database. The register function allows new users to create an account, and the apology function is used to display custom error messages.
+
+The @app.after_request decorator specifies a function that should be executed after every request made to the application. In this case, the function sets the cache control headers to prevent caching of responses.
+
+The @login_required decorator is a custom decorator that checks if the user is logged in before allowing access to certain routes. If the user is not logged in, they will be redirected to the login page.
+
+If a user makes a mistake or does not provide a password or username, the apology function will redirect the user to a custom meme with the HTML error code and what went wrong allowing them to fix the problem. The majority of the styling for the application has been implemented using the Bootstrap framework.
