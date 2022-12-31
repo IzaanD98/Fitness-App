@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Records
+{% endblock %}
+
+{% block main %}
+   <h1>Records</h1>
+   <table>
+    <thead>
+        <tr>
+            <th>Exercise</th>
+            <th>Weight</th>
+            <th>Repetitions</th>
+            <th>Date</th>
+        </tr>
+   </thead>
+   <tbody>
+    {% for row in records %}
+     <tr>
+         <td>{{ row["exercise"] }}</td>
+         <td>{{ row["weight"] }}</td>
+         <td>{{ row["repetitions"] }}</td>
+         <td>{{ row["date"] }}</td>
+     </tr>
+    {% endfor %}
+ </tbody>
+ </table>
+{% endblock %}

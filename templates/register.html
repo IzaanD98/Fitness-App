@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+ <img src="https://external-preview.redd.it/eX7gUGEfLRz11vZr3gue8ensbXbSYASuimAWxvWHz6A.jpg?width=640&crop=smart&auto=webp&s=86a2eeb7f6b085f98b978c05025de6069d124051" id="banner" class="login-img" alt="saitama">
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" pattern = "^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" title="Must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, and one number" placeholder="Password" type="password">
+        </div>
+        <div class="mb-3">
+         <input class="form-control mx-auto w-auto" id="password" name="confirmation" pattern = "^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" placeholder="Confirm Password" title="Must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, and one number" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock %}

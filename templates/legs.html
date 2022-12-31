@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Legs
+{% endblock %}
+
+{% block main %}
+  <div class="text&img">
+    <h1>Legs</h1>
+    <img src="https://i.shgcdn.com/eed01c43-1cf1-4ab5-bc04-5d1b665acc44/-/format/auto/-/preview/3000x3000/-/quality/lighter/" alt="push/pull/legs">
+    <p>Squats are the king of all leg exercises. They're the best movement for building big legs because they activate every muscle group in your legs.</p>
+    <p>This compound movement will activate your quads, hamstrings, and glutes. Performing squats will also help build a strong core, which is very beneficial.</p>
+    <p>But, what's important when doing this leg exercise, or any exercise for that matter, is that you perform it correctly.</p>
+    <p>If you are not using the proper form, you could injure your back, knees, and hips, putting you out of action for several weeks and, worst-case scenario, months.</p>
+    <p>To properly perform this exercise:</p>
+    <p>Stand at a squatting station with your feet positioned roughly shoulder-width apart and your toes angled slightly outward.</p>
+    <p>Press up while keeping your back and neck as straight as possible, lifting the bar from the station.</p>
+    <p>Bend your knees until your thighs are just about parallel to the floor so that your hip joints are lower than your knees.</p>
+    <p>Slowly raise your body back up until you are in the starting posture.</p>
+    <p>You can record your highest weight record for pull exercises below:</p>
+   </div>
+   <form action="/legs" method="post">
+    <div class="mb-3">
+      <label for="exercise">Exercise:</label><br>
+      <select id="exercise" name="exercise">
+        <option value="Squats">Squats</option>
+        <option value="Lunges">Lunges</option>
+        <option value="Leg-press">Leg Press</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="weight">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="weight" name="weight" placeholder="Weight" type="number">
+      </label>
+    </div>
+    <div class="mb-3">
+      <label for="repetitions">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="repetitions" name="repetitions" placeholder="Repetitions" type="number">
+      </label>
+    </div>
+    <button class="btn btn-primary" type="submit">Record</button>
+  </form>
+
+
+{% endblock %}
