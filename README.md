@@ -45,7 +45,7 @@ To run a Flask application, you can follow these steps:
    ```
    pip install cs50
    pip install flask
-   pip install flask
+   pip install flask-session
    ```
 
 4. Run the application using the following command:
